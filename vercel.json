@@ -1,0 +1,10 @@
+{
+  "builds": [
+    { "src": "run.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "run.py" },
+    { "src": "/health", "dest": "run.py" },
+    { "src": "/(.*)", "dest": "run.py" }
+  ]
+}
